@@ -59,10 +59,10 @@ echo "Julia successfully installed" | indent
 
 
 julia -e 'Pkg.init(); Pkg.update()'
-julia -e 'Pkg.add("HttpServer")'
-julia -e 'Pkg.add("HttpCommon")'
-julia -e 'Pkg.add("JSON")'
-julia -e 'Pkg.add("XMLDict")'
+#julia -e 'Pkg.add("HttpServer")'
+#julia -e 'Pkg.add("HttpCommon")'
+#julia -e 'Pkg.add("JSON")'
+#julia -e 'Pkg.add("XMLDict")'
 #julia -e 'Pkg.clone("git://github.com/codeneomatrix/Merly.jl.git")'
 
 
