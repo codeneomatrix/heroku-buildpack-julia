@@ -5,4 +5,5 @@ cat <<EOF
 ---
 config_vars:
   PATH: $PATH:/app/vendor/cmake/bin
+  PATH: $PATH:/julia-ae26b25d43/bin
 EOF
