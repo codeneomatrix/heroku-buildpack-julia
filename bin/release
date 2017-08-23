@@ -5,6 +5,4 @@ cat <<EOF
 ---
 config_vars:
   PATH: $PATH:/app/vendor/cmake/bin
-EOFcat <<EOF
---- {}
 EOF
