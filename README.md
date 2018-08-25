@@ -17,6 +17,8 @@ Add this line to the .buildpacks file in your project:
 
 or use the command `heroku buildpacks:set`
 
+In your project, create a file `package.jl` with any
+Julia code you want to run after installation.
 
 ## Thanks
 
