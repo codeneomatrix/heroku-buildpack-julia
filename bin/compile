@@ -48,7 +48,7 @@ JULIA_VERSION_minor="1.0.0"
 #S3_BUCKET="julialang"
 JULIA_URL="https://julialang-s3.julialang.org/bin/linux/x64/${JULIA_VERSION}/julia-${JULIA_VERSION_minor}-linux-x86_64.tar.gz"
 
-JULIA_BINARIES="$CACHE_DIR/julia_${JULIA_VERSION}.tar.gz"
+JULIA_BINARIES="$CACHE_DIR/julia_${JULIA_VERSION_minor}.tar.gz"
 JULIA_PATH="$TMP_PATH/julia"
 
 if [ -f $JULIA_BINARIES ]; then
