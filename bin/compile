@@ -43,12 +43,14 @@ BIN_PATH="$BUILD_DIR/bin"
 TMP_PATH="$BUILD_DIR/tmp"
 mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
 
+
 JULIA_VERSION="1.0"
 JULIA_VERSION_minor="1.0.0"
 #S3_BUCKET="julialang"
 JULIA_URL="https://julialang-s3.julialang.org/bin/linux/x64/${JULIA_VERSION}/julia-${JULIA_VERSION_minor}-linux-x86_64.tar.gz"
 
 JULIA_BINARIES="$CACHE_DIR/julia_${JULIA_VERSION_minor}.tar.gz"
+
 JULIA_PATH="$TMP_PATH/julia"
 
 if [ -f $JULIA_BINARIES ]; then
@@ -59,18 +61,17 @@ else
 fi
 
 echo "Unpacking binaries" | indent
-tar xzf $JULIA_BINARIES -C $BUILD_DIR
-
-# rm -rf $JULIA_PATH
+mkdir -p $BUILD_DIR/$JULIA_VERSION && tar xzf $JULIA_BINARIES -C $BUILD_DIR/$JULIA_VERSION --strip-components=1
 
 echo "Creating runtime environment" | indent
 mkdir -p $BUILD_DIR/.profile.d
+
 echo "export PATH=\$HOME/julia-\${JULIA_VERSION_minor}/bin:\$PATH" >> $BUILD_DIR/.profile.d/julia_paths.sh
 
 echo "Installing packages" | indent
 cd $BUILD_DIR
 julia-${JULIA_VERSION_minor}/bin/julia package.jl
+
 mv ~/.julia ./
 
 echo "Julia successfully installed" | indent
-
