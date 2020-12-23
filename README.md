@@ -5,8 +5,8 @@ This is a [Heroku buildpack][0] for adding a [Julia binary][1] to your environme
 
 ## Versions
 
-* Buildpack: `0.4`
-* Julia: `1.2.0`
+* Buildpack: `0.5`
+* Julia: `1.5.3`
 
 
 ## Usage

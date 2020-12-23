@@ -44,8 +44,8 @@ TMP_PATH="$BUILD_DIR/tmp"
 mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
 
 
-JULIA_VERSION_major="1.2"
-JULIA_VERSION="julia-1.2.0"
+JULIA_VERSION_major="1.5"
+JULIA_VERSION="julia-1.5.3"
 #S3_BUCKET="julialang"
 JULIA_URL="https://julialang-s3.julialang.org/bin/linux/x64/${JULIA_VERSION_major}/${JULIA_VERSION}-linux-x86_64.tar.gz"
 
