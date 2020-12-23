@@ -66,7 +66,7 @@ mkdir -p $BUILD_DIR/$JULIA_VERSION && tar xzf $JULIA_BINARIES -C $BUILD_DIR/$JUL
 echo "Creating runtime environment" | indent
 mkdir -p $BUILD_DIR/.profile.d
 
-echo "export PATH=\$HOME/julia-\$JULIA_VERSION/bin:\$PATH" >> $BUILD_DIR/.profile.d/julia_paths.sh
+echo "export PATH=\$HOME/${JULIA_VERSION}/bin:\$PATH" >> $BUILD_DIR/.profile.d/julia_paths.sh
 
 echo "Installing packages" | indent
 cd $BUILD_DIR
